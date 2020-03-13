@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TravoH</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Black+Ops+One" rel="stylesheet">
+        <link rel="stylesheet" href="CSSn/trevo.css">
+        <link rel="stylesheet" href="CSSn/font-awesome.min.css ">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body style="margin-top: 50px; ">
+        <nav class="navbar    navbar-fixed-top">
+            <div class="manu-border">
+                <div class="container">
+                    <button type="button" class="navbar-toggle toog" data-toggle="collapse" data-target="#menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home </a></li>
+                            <li><a href="About.html">About </a></li>
+                            <li class="dropdown">
+                                <a href="Hotel.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hotels <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Hotel.html">City</a></li>
+                                    <li><a href="paymentHotel.html">Payment</a></li>
+
+                                </ul> 
+                            </li>
+                            <li class="dropdown">
+                                <a href="flights.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flights <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="flights.html">List</a></li>
+                                    <li><a href="flightspayment.html ">Payment</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="rentals.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rentals <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="rentals.html ">Chose suites</a></li>
+                                    <li><a href="paymentHotel.html">Payment</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="cars.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cars <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="cars.html">Chose Cars</a></li>
+                                    <li><a href="carpayment.html">Payment</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="">Activities </a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li><a href="Login.html">Log-in </a></li>
+                            <li><a href="#" class="dropdown-toggle" id="signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Sing-up <span class="caret"></span></a>
+                                <ul class="dropdown-menu sing-up" id="close">
+                                    <li>
+                                        <label>Username or email</label>
+                                        <input class="form-control" placeholder="anikdatta@gmail.com" type="text">
+                                    </li>
+                                    <li>
+                                        <label>Password</label>
+                                        <input class="form-control" type="password" placeholder="my secret password">
+                                        
+                                    </li>
+                                    <li> <input class=" btn-mar btn btn-primary btn-block" type="button" onclick="signout()" value="Sign in"> </li>
+
+                                </ul></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+        </nav>
+        <!---------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="container">
+            <h1 class="h-text">Search for Hotels</h1>
+        </div> 
+        <div class="container" >
+            <form>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group "><i class="fa fa-map-marker input-icon "></i>
+                            <label>Where</label>
+                            <span class="twitter-typeahead" style="position: relative; display: block; direction: ltr;">
+                                <input class=" form-control " type="text" disabled="" autocomplete="off" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);">
+                                <input class=" form-control " placeholder="City, Hotel Name or U.S. Zip Code" type="text" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+
+                                <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;">
+
+                                </span>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="" data-date-format="MM d, D">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group ">
+                                        <i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                                        <label>Check in</label>
+                                        <input class="form-control " name="start" type="date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                                        <label>Check out</label>
+                                        <input class="form-control" name="end" type="date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mar-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group  ">
+                                    <label>Guests</label>
+                                    <div class="btn-group " data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="options">1</label>
+                                        <label class="btn btn-primary ">
+                                            <input type="radio" name="options">2</label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options">3</label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options">4</label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options">4+</label>
+                                    </div>
+                                    <select class="form-control1 hidden hidden1">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option selected="selected">5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label>Rooms</label>
+                                    <div class="btn-group " data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="options">1</label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options">2</label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options">3</label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options">4</label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options">4+</label>
+                                    </div>
+                                    <select class="form-control1 hidden hidden1">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option selected="selected">5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="btn btn-primary " type="submit" value="Search for Hotels">
+            </form>
+            <div class="gap gap-small"></div>
+            <div class="container">
+                <h1 class="h-text">Hotels in Popular Destinations</h1>
+            </div> 
+            <div class="col-md-12 margin ">
+
+
+
+               
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/Srimangal-Slide-1.jpg " alt="">
+                            <div class="overlay">
+                                <h2>Srimongol</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/352_large-thumbnail_sunset_on_the_sea.jpg " alt="">
+                            <div class="overlay">
+                                <h2>Cox's Bazar</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/sundarban_bg1-626x365.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Sundarban</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/M-Yousuf-Tushar-980x735.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Bandarban</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                
+                <h3></h3>
+                
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1 ">
+                            <img class="img-responsive" src="img/Srimangal-Slide-1.jpg " alt="">
+                            <div class="overlay">
+                                <h2>Srimongol</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/352_large-thumbnail_sunset_on_the_sea.jpg " alt="">
+                            <div class="overlay">
+                                <h2>Cox's Bazar</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/sundarban_bg1-626x365.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Sundarban</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/M-Yousuf-Tushar-980x735.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Bandarban</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                
+                <h3></h3>
+               
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/Srimangal-Slide-1.jpg " alt="">
+                            <div class="overlay">
+                                <h2>Srimongol</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/352_large-thumbnail_sunset_on_the_sea.jpg " alt="">
+                            <div class="overlay">
+                                <h2>Cox's Bazar</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/sundarban_bg1-626x365.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Sundarban</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="hovereffect1 margin1">
+                            <img class="img-responsive" src="img/M-Yousuf-Tushar-980x735.jpg" alt="">
+                            <div class="overlay">
+                                <h2>Bandarban</h2>
+                                <p>
+                                    <a href="#">
+
+                                        68065 reviews<br>
+                                        359 offers from $88
+                                    </a>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                
+
+
+
+
+            </div>
+        </div>
+        <div class="gap gap-small"></div>
+        <!-- ----------------------------------------------------------------------------------------------------------------------------------->
+        <div class="container">
+            <h1 class="h-text">Top Deals</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 margin ">
+
+
+
+                    <div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/lhotel_porto_bay_sao_paulo_lobby_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_the_cliff_bay_spa_suite_800x600.jpg" alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_suite_800x600 (1).jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_suite2_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_living_room_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_serra_golf_library_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_1_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 item-box">
+                            <div class="hovereffect2">
+                                <img class="img-responsive" src="img/hotel_porto_bay_rio_internacional_de_luxe_800x600.jpg " alt="">
+                                <div class="overlay">
+
+                                    <a class="info" href="#">Book Now</a>
+                                </div>
+                            </div>
+                            <ul class=" main-ul col-md-12  icon-list   star">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                                
+                            </ul>
+                            <div class="text-hotel">
+                                <h3>Hotel Name</h3>
+
+                            </div>
+                            <div class="mb0" >
+
+                                <i class="fa fa-map-marker"></i>
+                                East Elmhurst, NY (LaGuardia Airport (LGA))<br>
+
+
+                                <span class=" text-color">$499</span>
+                                avg/night
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div><!--end-->
+            </div>
+        </div>
+
+
+        <!--        <>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>part1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+
+
+
+        <footer id="main-footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3">
+
+                        <p class="text-3">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
+                        <ul class="icon-list icon-color">
+                            <li>
+                                <a class="fa fa-facebook fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-twitter fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-google-plus fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-linkedin fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-pinterest fa-lg icon-color" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="text-4" >Newsletter</h4>
+                        <form>
+                            <label>Enter your E-mail Address</label>
+                            <input type="text" class="form-control">
+                            <p class=""><small>*We Never Send Spam</small>
+                            </p>
+                            <input type="submit" class="btn btn-primary" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="icon-list text-3">
+                            <li><a href="#">About US</a>
+                            </li>
+                            <li><a href="#">Press Centre</a>
+                            </li>
+                            <li><a href="#">Best Price Guarantee</a>
+                            </li>
+                            <li><a href="#">Travel News</a>
+                            </li>
+                            <li><a href="#">Jobs</a>
+                            </li>
+                            <li><a href="#">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                            <li><a href="#">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 ">
+                        <h4 class="text-4">Have Questions?</h4>
+                        <h4 class="text-4">+1-202-555-0173</h4>
+                        <h4><a href="#" class="text-4">support@traveler.com</a></h4>
+                        <p>24/7 Dedicated Customer Support</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>                                
+
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TravoF </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Black+Ops+One" rel="stylesheet">
+        <link rel="stylesheet" href="CSSn/trevo.css">
+        <link rel="stylesheet" href="CSSn/font-awesome.min.css ">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body style="margin-top: 50px; ">
+        <nav class="navbar    navbar-fixed-top">
+            <div class="manu-border">
+                <div class="container">
+                    <button type="button" class="navbar-toggle toog" data-toggle="collapse" data-target="#menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+
+                    </button>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home </a></li>
+                            <li><a href="About.html">About </a></li>
+                            <li class="dropdown">
+                                <a href="Hotel.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hotels <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Hotel.html">City</a></li>
+                                    <li><a href="paymentHotel.html">Payment</a></li>
+
+                                </ul> 
+                            </li>
+                            <li class="dropdown">
+                                <a href="flights.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flights <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="flights.html">List</a></li>
+                                    <li><a href="flightspayment.html ">Payment</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="rentals.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rentals <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="rentals.html ">Chose suites</a></li>
+                                    <li><a href="paymentHotel.html">Payment</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="cars.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cars <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="cars.html">Chose Cars</a></li>
+                                    <li><a href="carpayment.html">Payment</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="">Activities </a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li><a href="Login.html">Log-in </a></li>
+                            <li><a href="#" class="dropdown-toggle" id="signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Sing-up <span class="caret"></span></a>
+                                <ul class="dropdown-menu sing-up" id="close">
+                                    <li>
+                                        <label>Username or email</label>
+                                        <input class="form-control" placeholder="anikdatta@gmail.com" type="text">
+                                    </li>
+                                    <li>
+                                        <label>Password</label>
+                                        <input class="form-control" type="password" placeholder="my secret password">
+                                        
+                                    </li>
+                                    <li> <input class=" btn-mar btn btn-primary btn-block" type="button" onclick="signout()" value="Sign in"> </li>
+
+                                </ul></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+        </nav>
+        <!---------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 flit-search">
+                    <h2>Search for Flights </h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group "><i class="fa fa-map-marker input-icon "></i>
+                                    <label>From</label>
+                                    <span class="twitter-typeahead" style="position: relative; display: block; direction: ltr;">
+                                        <input class=" form-control " type="text" disabled="" autocomplete="off" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);">
+                                        <input class=" form-control " placeholder="City, Hotel Name or U.S. Zip Code" type="text" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+
+                                        <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;">
+
+                                        </span>
+
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="" data-date-format="MM d, D">
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+
+                                            <div class="form-group "><i class="fa fa-map-marker input-icon "></i>
+                                                <label>To</label>
+                                                <span class="twitter-typeahead" style="position: relative; display: block; direction: ltr;">
+                                                    <input class=" form-control " type="text" disabled="" autocomplete="off" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);">
+                                                    <input class=" form-control " placeholder="City, Hotel Name or U.S. Zip Code" type="text" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+
+                                                    <span class="tt-dropdown-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; right: auto;">
+
+                                                    </span>
+
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-hightlight"></i>
+                                                <label>Departing</label>
+                                                <input class="form-control" name="end" type="date">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mar-1">
+                                <div class="row">
+
+                                    <div class="form-group  ">
+                                        <label>Passengers</label>
+                                        <div class="btn-group " data-toggle="buttons">
+                                            <label class="btn btn-primary active">
+                                                <input type="radio" name="options">1</label>
+                                            <label class="btn btn-primary ">
+                                                <input type="radio" name="options">2</label>
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="options">3</label>
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="options">4</label>
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="options">4+</label>
+                                        </div>
+                                        <select class="form-control1 hidden hidden1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option selected="selected">5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                        </select>
+
+                                    </div>
+                                    <!--                                    ---------------------------------->
+
+                                    <!--------------------------------------->
+                                </div>
+                            </div>
+                        </div>
+                        <input class="btn btn-primary " type="submit" value="Search for Hotels">
+                    </form>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 margin-botom">
+                    <div class="paybox2 ">
+
+
+
+                        <div class="col-md-12">
+                            <div class="paybox3">
+                                <h3>Filter By:</h3>
+                            </div>
+                            <h4 class=" ">Stops</h4>
+                            <h5 class="rt-float" style="text-align: center">Price from</h5>
+                        </div>
+                        <div class="col-md-12 paybox3" >
+                            <label class="my-checkbox"><p>Non-stop</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$215</h6>
+                            </label>
+                            <label class="my-checkbox"><p>1 Stop</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$154</h6>
+                            </label>
+                            <label class="my-checkbox"><p>2+ Stops</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$123</h6>
+                            </label>
+                        </div>
+                        <div class="col-md-12">
+
+                            <h4 class=" ">Price</h4>
+
+                        </div>
+                        <div class="col-md-12 paybox3" >
+
+
+
+                        </div>
+                        <div class="col-md-12">
+
+                            <h4 class=" ">Flight Class</h4>
+                            <h5 class="rt-float" style="text-align: center">Price from</h5>
+                        </div>
+                        <div class="col-md-12 paybox3" >
+                            <label class="my-checkbox"><p>Economy</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$154</h6>
+                            </label>
+                            <label class="my-checkbox"><p>Business</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$316</h6>
+                            </label>
+                            <label class="my-checkbox"><p>First</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$450</h6>
+                            </label>
+                        </div>
+                        <div class="col-md-12">
+
+                            <h4 class=" ">Airlines</h4>
+                            <h5 class="rt-float" style="text-align: center">Price from</h5>
+                        </div>
+                        <div class="col-md-12 paybox3" >
+                            <label class="my-checkbox"><p>Lufthansa</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$215</h6>
+                            </label>
+                            <label class="my-checkbox"><p>American Airlines</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$350</h6>
+                            </label>
+                            <label class="my-checkbox"><p>Airfrance</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$197</h6>
+                            </label>
+                            <label class="my-checkbox"><p>Croatia Airlines</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$264</h6>
+                            </label>
+                            <label class="my-checkbox"><p>Delta</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$445</h6>
+                            </label>
+                            <label class="my-checkbox"><p>Air Canadat</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+                                <h6 class="rt-float">$450</h6>
+                            </label>
+                        </div>
+                        <div class="col-md-12">
+
+                            <h4 class=" ">Departure Time</h4>
+
+                        </div>
+                        <div class="col-md-12 paybox3" >
+                            <label class="my-checkbox"><p class="d-time">Morning (5:00a - 11:59a)</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+
+                            </label>
+                            <label class="my-checkbox"><p class="d-time">Afternoon (12:00p - 5:59p)</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+
+                            </label>
+                            <label class="my-checkbox"><p class="d-time">Evening (6:00p - 11:59p)</p>
+                                <input type="checkbox">
+                                <span class="checkmark">
+
+                                </span>
+
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 paybox2">
+
+                    </div>
+                </div>
+                <div class="col-md-9 margin-botom">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/delta.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Delta</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>2 stops</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$427</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: Economy</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item" >
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/american-airlines.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>American Airlines</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>2 stops</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$286</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: First</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/lufthansa.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Lufthansa</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>non-stop</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$210</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: Economy</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/aircanada.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Air Canada</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>2 stops</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$175</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: First</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/airfrance.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Airfrance</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>2 stops</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$306</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: Business</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/american-airlines.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>American Airlines</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>non-stop</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$354</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: First</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/airfrance.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Airfrance</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>non-stop</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$301</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: Economy</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/lufthansa.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Lufthansa</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>2 stops</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$378</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: Business</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/croatia.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Croatia Airlines</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>1 stop</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$298</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: First</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="booking-item">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="booking-item-airline-logo">
+                                                <img src="img/lufthansa.jpg" alt="Image Alternative text" title="Image Title">
+                                                <p>Lufthansa</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="booking-item-flight-details">
+                                                <div class="booking-item-departure"><i class="fa fa-plane"></i>
+                                                    <h5>10:25 PM</h5>
+                                                    <p class="booking-item-date">Sun, Mar 22</p>
+                                                    <p class="booking-item-destination">London, England, United Kingdom (LHR)</p>
+                                                </div>
+                                                <div class="booking-item-arrival"><i class="fa fa-plane fa-flip-vertical"></i>
+                                                    <h5>12:25 PM</h5>
+                                                    <p class="booking-item-date">Sat, Mar 23</p>
+                                                    <p class="booking-item-destination">New York, NY, United States (JFK)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <h5>22h 50m</h5>
+                                            <p>non-stop</p>
+                                        </div>
+                                        <div class="col-md-3"><span class="booking-item-price">$442</span><span>/person</span>
+                                            <p class="booking-item-flight-class">Class: First</p><button class="btn btn-primary" href="#">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="booking-item-details">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p>Flight Details</p>
+                                                <h5 class="list-title">London (LHR) to Charlotte (CLT)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 731</li>
+                                                    <li>Economy / Coach Class ( M), AIRBUS INDUSTRIE A330-300</li>
+                                                    <li>Depart 09:55 Arrive 15:10</li>
+                                                    <li>Duration: 9h 15m</li>
+                                                </ul>
+                                                <h5>Stopover: Charlotte (CLT) 7h 1m</h5>
+                                                <h5 class="list-title">Charlotte (CLT) to New York (JFK)</h5>
+                                                <ul class="list">
+                                                    <li>US Airways 1873</li>
+                                                    <li>Economy / Coach Class ( M), Airbus A321</li>
+                                                    <li>Depart 22:11 Arrive 23:53</li>
+                                                    <li>Duration: 1h 42m</li>
+                                                </ul>
+                                                <p>Total trip time: 17h 58m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <!--                ----------------------------------------------------------->
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-----------------------------------------------------end------------------------------------------------------------------------------------------->
+        <footer id="main-footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3">
+
+                        <p class="text-3">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
+                        <ul class="icon-list icon-color">
+                            <li>
+                                <a class="fa fa-facebook fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-twitter fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-google-plus fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-linkedin fa-lg icon-color" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="fa fa-pinterest fa-lg icon-color" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class="text-4" >Newsletter</h4>
+                        <form>
+                            <label>Enter your E-mail Address</label>
+                            <input type="text" class="form-control">
+                            <p class=""><small>*We Never Send Spam</small>
+                            </p>
+                            <input type="submit" class="btn btn-primary" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="icon-list text-3">
+                            <li><a href="#">About US</a>
+                            </li>
+                            <li><a href="#">Press Centre</a>
+                            </li>
+                            <li><a href="#">Best Price Guarantee</a>
+                            </li>
+                            <li><a href="#">Travel News</a>
+                            </li>
+                            <li><a href="#">Jobs</a>
+                            </li>
+                            <li><a href="#">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                            <li><a href="#">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 ">
+                        <h4 class="text-4">Have Questions?</h4>
+                        <h4 class="text-4">+1-202-555-0173</h4>
+                        <h4><a href="#" class="text-4">support@traveler.com</a></h4>
+                        <p>24/7 Dedicated Customer Support</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>                                
+
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/plugins.js"></script>
+       
+    </body>
+</html>
