@@ -1,236 +1,302 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>Travolog</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Black+Ops+One" rel="stylesheet">
-        <link rel="stylesheet" href="CSSn/trevo.css">
-        <link rel="stylesheet" href="CSSn/font-awesome.min.css ">
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    </head>
-    <body style="margin-top: 50px; ">
-        <nav class="navbar    navbar-fixed-top">
-            <div class="manu-border">
-                <div class="container">
-                    <button type="button" class="navbar-toggle toog" data-toggle="collapse" data-target="#menu">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-
-
-                    </button>
-                    <div class="collapse navbar-collapse" id="menu">
-                        <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home </a></li>
-                            <li><a href="About.html">About </a></li>
-                            <li class="dropdown">
-                                <a href="Hotel.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hotels <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="Hotel.html">City</a></li>
-                                    <li><a href="paymentHotel.html">Payment</a></li>
-
-                                </ul> 
-                            </li>
-                            <li class="dropdown">
-                                <a href="flights.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Flights <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="flights.html">List</a></li>
-                                    <li><a href="flightspayment.html ">Payment</a></li>
-
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="rentals.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rentals <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="rentals.html ">Chose suites</a></li>
-                                    <li><a href="paymentHotel.html">Payment</a></li>
-
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="cars.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cars <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="cars.html">Chose Cars</a></li>
-                                    <li><a href="carpayment.html">Payment</a></li>
-
-                                </ul>
-                            </li>
-                            <li><a href="">Activities </a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-
-                            <li><a href="Login.html">Log-in </a></li>
-                            <li><a href="#" class="dropdown-toggle" id="signin" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Sing-up <span class="caret"></span></a>
-                                <ul class="dropdown-menu sing-up" id="close">
-                                    <li>
-                                        <label>Username or email</label>
-                                        <input class="form-control" placeholder="anikdatta@gmail.com" type="text">
-                                    </li>
-                                    <li>
-                                        <label>Password</label>
-                                        <input class="form-control" type="password" placeholder="my secret password">
-                                        
-                                    </li>
-                                    <li> <input class=" btn-mar btn btn-primary btn-block" type="button" onclick="signout()" value="Sign in"> </li>
-
-                                </ul></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>    
-        </nav>
-        <!---------------------------------------------------------------------------------------------------------------------------------------------->
-        <div class="full-center">
-
-
-            <div class="container ">
-                <div class="row " data-gutter="60">
-                    <div class="col-md-4">
-                        <div class="visible-lg">
-                            <h3 class="mb15">Welcome to Traveler</h3>
-                            <p>Est nisl facilisis consectetur eget fermentum rutrum suscipit penatibus ultrices eu bibendum mi volutpat mattis cum facilisis nunc platea tincidunt vehicula laoreet montes parturient urna magnis eu etiam eget integer</p>
-                            <p>Nullam consectetur fames erat scelerisque ac conubia orci mauris facilisi</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="mb15">Login</h3>
-                        <form>
-                            <div class="form-group "><i class="fa fa-user input-icon input-icon-show"></i>
-                                <label>Username or email</label>
-                                <input class="form-control" placeholder="anikdatta@gmail.com" type="text">
-                            </div>
-                            <div class="form-group "><i class="fa fa-lock input-icon input-icon-show"></i>
-                                <label>Password</label>
-                                <input class="form-control" type="password" placeholder="my secret password">
-                            </div>
-                            <input class="btn btn-primary" type="submit" value="Sign in">
-                        </form>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="mb15">New To Traveler?</h3>
-                        <form>
-                            <div class="form-group "><i class="fa fa-user input-icon input-icon-show"></i>
-                                <label>Full Name</label>
-                                <input class="form-control" placeholder="anik datta" type="text">
-                            </div>
-                            <div class="form-group "><i class="fa fa-envelope input-icon input-icon-show"></i>
-                                <label>Emai</label>
-                                <input class="form-control" placeholder="abikdatta@gmail.com" type="text">
-                            </div>
-                            <div class="form-group "><i class="fa fa-lock input-icon input-icon-show"></i>
-                                <label>Password</label>
-                                <input class="form-control" type="password" placeholder="my secret password">
-                            </div>
-                            <input class="btn btn-primary" type="submit" value="Sign up for Traveler">
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <ul class="footer-links">
-                <li><a href="#">About</a>
-                </li>
-                <li><a href="#">Help</a>
-                </li>
-                <li><a href="#">Hot Deals</a>
-                </li>
-                <li><a href="#">Popular Locations</a>
-                </li>
-                <li><a href="#">Cheap Flights</a>
-                </li>
-                <li><a href="#">Business</a>
-                </li>
-                <li><a href="#">Media</a>
-                </li>
-                <li><a href="#">Developers</a>
-                </li>
-                <li><a href="#">Advertise</a>
-                </li>
+  <head>
+    <title>Travo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Black+Ops+One"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSSn/trevo.css" />
+    <link rel="stylesheet" href="CSSn/font-awesome.min.css " />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class="manu-border">
+        <div class="container">
+          <button
+            type="button"
+            class="navbar-toggle toog"
+            data-toggle="collapse"
+            data-target="#menu"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home </a></li>
+              <li><a href="About.html">About </a></li>
+              <li class="dropdown">
+                <a
+                  href="Hotel.html"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Hotels <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Hotel.html">City</a></li>
+                  <li><a href="paymentHotel.html">Payment</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a
+                  href="flights.html"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Flights <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="flights.html">List</a></li>
+                  <li><a href="flightspayment.html ">Payment</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a
+                  href="rentals.html"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Rentals <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="rentals.html ">Chose suites</a></li>
+                  <li><a href="paymentHotel.html">Payment</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a
+                  href="cars.html"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Cars <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="cars.html">Chose Cars</a></li>
+                  <li><a href="carpayment.html">Payment</a></li>
+                </ul>
+              </li>
+              <li><a href="">Activities </a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="Login.html">Log-in </a></li>
+              <li>
+                <a
+                  href="#"
+                  class="dropdown-toggle"
+                  id="signin"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Sing-up <span class="caret"></span
+                ></a>
+                <ul class="dropdown-menu sing-up" id="close">
+                  <li>
+                    <label>Username or email</label>
+                    <input
+                      class="form-control"
+                      placeholder="anikdatta@gmail.com"
+                      type="text"
+                    />
+                  </li>
+                  <li>
+                    <label>Password</label>
+                    <input
+                      class="form-control"
+                      type="password"
+                      placeholder="my secret password"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      class="btn-mar btn btn-primary btn-block"
+                      type="button"
+                      onclick="signout()"
+                      value="Sign in"
+                    />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!--        <>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>part1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
-
-
-
-
-        <footer id="main-footer">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-3">
-
-                        <p class="text-3">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
-                        <ul class="icon-list icon-color">
-                            <li>
-                                <a class="fa fa-facebook fa-lg icon-color" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-twitter fa-lg icon-color" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-google-plus fa-lg icon-color" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-linkedin fa-lg icon-color" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-pinterest fa-lg icon-color" href="#"></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3">
-                        <h4 class="text-4" >Newsletter</h4>
-                        <form>
-                            <label>Enter your E-mail Address</label>
-                            <input type="text" class="form-control">
-                            <p class=""><small>*We Never Send Spam</small>
-                            </p>
-                            <input type="submit" class="btn btn-primary" value="Subscribe">
-                        </form>
-                    </div>
-                    <div class="col-md-2">
-                        <ul class="icon-list text-3">
-                            <li><a href="#">About US</a>
-                            </li>
-                            <li><a href="#">Press Centre</a>
-                            </li>
-                            <li><a href="#">Best Price Guarantee</a>
-                            </li>
-                            <li><a href="#">Travel News</a>
-                            </li>
-                            <li><a href="#">Jobs</a>
-                            </li>
-                            <li><a href="#">Privacy Policy</a>
-                            </li>
-                            <li><a href="#">Terms of Use</a>
-                            </li>
-                            <li><a href="#">Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 ">
-                        <h4 class="text-4">Have Questions?</h4>
-                        <h4 class="text-4">+1-202-555-0173</h4>
-                        <h4><a href="#" class="text-4">support@traveler.com</a></h4>
-                        <p>24/7 Dedicated Customer Support</p>
-                    </div>
-
-                </div>
+      </div>
+    </nav>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="full-center">
+      <div class="container">
+        <div class="row" data-gutter="60">
+          <div class="col-md-4 col-sm-12">
+            <div class="visible-lg">
+              <h3 class="mb15">Welcome to Traveler</h3>
+              <p>
+                Est nisl facilisis consectetur eget fermentum rutrum suscipit
+                penatibus ultrices eu bibendum mi volutpat mattis cum facilisis
+                nunc platea tincidunt vehicula laoreet montes parturient urna
+                magnis eu etiam eget integer
+              </p>
+              <p>
+                Nullam consectetur fames erat scelerisque ac conubia orci mauris
+                facilisi
+              </p>
             </div>
-        </footer>                                
+          </div>
+          <div class="col-md-4 col-sm-12 login-pd">
+            <h3 class="mb15">Login</h3>
+            <form>
+              <div class="form-group">
+                <i class="fa fa-user input-icon input-icon-show"></i>
+                <label>Username or email</label>
+                <input
+                  class="form-control"
+                  placeholder="anikdatta@gmail.com"
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa fa-lock input-icon input-icon-show"></i>
+                <label>Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  placeholder="my secret password"
+                />
+              </div>
+              <input class="btn btn-primary" type="submit" value="Sign in" />
+            </form>
+          </div>
+          <div class="col-md-4 col-sm-12 visible-lg">
+            <h3 class="mb15">New To Traveler?</h3>
+            <form>
+              <div class="form-group">
+                <i class="fa fa-user input-icon input-icon-show"></i>
+                <label>Full Name</label>
+                <input
+                  class="form-control"
+                  placeholder="anik datta"
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa fa-envelope input-icon input-icon-show"></i>
+                <label>Emai</label>
+                <input
+                  class="form-control"
+                  placeholder="abikdatta@gmail.com"
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <i class="fa fa-lock input-icon input-icon-show"></i>
+                <label>Password</label>
+                <input
+                  class="form-control"
+                  type="password"
+                  placeholder="my secret password"
+                />
+              </div>
+              <input
+                class="btn btn-primary"
+                type="submit"
+                value="Sign up for Traveler"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <script src="js/jquery-3.2.1.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+    <!--        <>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>part1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+
+    <footer id="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <p class="text-3">
+              Booking, reviews and advices on hotels, resorts, flights, vacation
+              rentals, travel packages, and lots more!
+            </p>
+            <ul class="icon-list icon-color">
+              <li>
+                <a class="fa fa-facebook fa-lg icon-color" href="#"></a>
+              </li>
+              <li>
+                <a class="fa fa-twitter fa-lg icon-color" href="#"></a>
+              </li>
+              <li>
+                <a class="fa fa-google-plus fa-lg icon-color" href="#"></a>
+              </li>
+              <li>
+                <a class="fa fa-linkedin fa-lg icon-color" href="#"></a>
+              </li>
+              <li>
+                <a class="fa fa-pinterest fa-lg icon-color" href="#"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h4 class="text-4">Newsletter</h4>
+            <form>
+              <label>Enter your E-mail Address</label>
+              <input type="text" class="form-control" />
+              <p class=""><small>*We Never Send Spam</small></p>
+              <input type="submit" class="btn btn-primary" value="Subscribe" />
+            </form>
+          </div>
+          <div class="col-md-2">
+            <ul class="icon-list text-3">
+              <li><a href="#">About US</a></li>
+              <li><a href="#">Press Centre</a></li>
+              <li><a href="#">Best Price Guarantee</a></li>
+              <li><a href="#">Travel News</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-4">Have Questions?</h4>
+            <h4 class="text-4">+1-202-555-0173</h4>
+            <h4><a href="#" class="text-4">support@traveler.com</a></h4>
+            <p>24/7 Dedicated Customer Support</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
