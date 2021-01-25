@@ -180,6 +180,12 @@ body {
 .last-minute-rating {
   color: #ed8323;
   font-size: 20px;
+  margin: 0px 50px 0px 0px;
+  display: inline-block;
+}
+.btn-white {
+  background: #ed8323;
+  color: #fff;
 }
 
 .main-ul li {
